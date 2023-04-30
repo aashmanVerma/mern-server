@@ -10,7 +10,7 @@ const cors = require('cors')
 
 const app = express();
 const id = uuidv4();
-const url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.g3am7ow.mongodb.net/?retryWrites=true&w=majority`
+const url = `mongodb+srv://aashman016:MOpLfQJYVW4WwidK@cluster0.g3am7ow.mongodb.net/?retryWrites=true&w=majority`
 app.use(cookieParser());
 app.use(cors());
 
