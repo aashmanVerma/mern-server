@@ -42,30 +42,6 @@ app.post("/save-user",(req,res)=>{
     })
 })
 
-app.post("/check-user",(req,res)=>{
-    const user = new User({
-        name : req.query.name,
-        email : req.query.email,
-    })
-    User.findOne(user).then((item)=>{
-        if (item) {
-            res.status.json("user founded in database")
-        } else {
-            res.status(200).json("user not found");
-        }
-    }).catch((err)=>{
-        console.log(err);
-    })
-})
-
-app.get("/fetch-users",(req,res)=>{
-    User.find().then((item)=>{
-        res.status(200).json(item)
-    }).catch((err)=>{
-        console.log(err);
-    })
-})
-
 
 app.post("/add-book",(req,res)=>{
     const book = new Book({
